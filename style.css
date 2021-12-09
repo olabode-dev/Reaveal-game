@@ -1,0 +1,107 @@
+body{
+  background: rgb(3, 7, 41);
+}
+.grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-auto-rows: 1fr;
+  text-align: center;
+  color: aliceblue;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Just to make the grid visible */
+
+.grid > * {
+  background: rgba(36, 28, 28, 0.514);
+  border: 1px white solid;
+  cursor: pointer;
+}
+
+.grid > *:hover {
+  background: rgb(37, 3, 3);
+}
+
+button{
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.game-header{
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 0 20px #ccc;
+}
+.tile-text{
+  font-size: 25px;
+  background: rgb(1, 4, 26);
+  box-shadow: 0 0 3px #ccc;
+}
+/* .tile-text{
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+} */
+/* .grid{
+  background: red;
+} */
+
+h2{
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-container{
+  background-image: url(image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  margin: 0 auto;
+  border: 3px solid rgba(234, 227, 240, 0.103);
+  height: 665px; 
+}
+
+.container{
+  background-image: url(image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  margin: 0 auto;
+  height: 660px;
+  margin-top: -49%;
+}
+
+.score-board{
+  display: flex;
+  margin: 0 auto;
+  color: rgb(28, 49, 49);
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  border: 2px solid white;
+  border-radius: 6%;
+  padding: 0px 10px 0px 10px;
+  background: rgba(3, 3, 58, 0.562);
+  color: aliceblue;
+  box-shadow: 0 0 20px #fff;
+}
